@@ -1,9 +1,12 @@
 
 function cal(){
 //  alert(weight.value)
-if (weight.value !== '' && height.value !== '' ) {
-    let w=weight.value;
-    let h=height.value;
+let weight=document.getElementById('weight').value;
+let height=document.getElementById('height').value;
+
+if (weight !== '' && height !== '' ) {
+    let w=parseFloat(weight);
+    let h=parseFloat(height);
     let meter=h/100;
     let i=w/(meter*meter);
     let bmi=i.toFixed(2);
@@ -32,3 +35,10 @@ else{
 }
 }
 
+function clear(){
+    document.getElementById('weight').value='';
+    document.getElementById('height').value='';
+    document.getElementById('BMI').innerHTML='';
+    document.getElementById('typeValue').innerHTML='';
+    document.getElementById('invalid').innerHTML='';
+}
