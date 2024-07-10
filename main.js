@@ -5,8 +5,8 @@ let weight=document.getElementById('weight').value;
 let height=document.getElementById('height').value;
 
 if (weight !== '' && height !== '' ) {
-    let w=parseFloat(weight);
-    let h=parseFloat(height);
+    let w=Number(weight);
+    let h=Number(height);
     let meter=h/100;
     let i=w/(meter*meter);
     let bmi=i.toFixed(2);
@@ -35,7 +35,8 @@ else{
 }
 }
 
-function clear(){
+function clearBMI(){
+    
     document.getElementById('weight').value='';
     document.getElementById('height').value='';
     document.getElementById('BMI').innerHTML='';
