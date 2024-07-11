@@ -16,13 +16,13 @@ if (weight !== '' && height !== '' ) {
     BMItype.innerHTML='';
 
     let type='';
-    if (i< 18.4) {
+    if (bmi< 18.4) {
         type='UNDER-WEIGHT 😔'
     }
-    else if(i>=18.5 && i<=24.9){
+    else if(bmi>=18.5 && bmi<=24.9){
         type='NORMAL 🥳'
     }
-    else if(i>=25.0 && i<=29.9){
+    else if(bmi>=25.0 && bmi<=29.9){
         type='OVER-WEIGHT 🥲'
     }else{
         type='OBESE 😨'
